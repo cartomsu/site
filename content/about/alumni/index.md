@@ -2,6 +2,7 @@
 title: Выпускники
 showTableOfContents: true
 weight: 6
+draft: true
 ---
 
 
