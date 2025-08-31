@@ -6,4 +6,4 @@ degree: master
 year: 5
 ---
 
-[Самсонов Тимофей Евгеньевич](/people/samsonov)
+[Самсонов Тимофей Евгеньевич](./people/samsonov)

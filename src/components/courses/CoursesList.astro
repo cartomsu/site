@@ -11,7 +11,7 @@ const { courses } = Astro.props;
   {
     courses.map((c) => (
       <li>
-        <a href={`/courses/${c.id}`}>{c.data.title}</a> {c.data.subtitle}
+        <a href={`./courses/${c.id}`}>{c.data.title}</a> {c.data.subtitle}
       </li>
     ))
   }

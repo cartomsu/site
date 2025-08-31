@@ -10,7 +10,7 @@ const people = await getCollection('people');
       .sort((a, b) => a.data.title.localeCompare(b.data.title))
       .map((p) => (
         <p>
-          <a href={`/people/${p.id}`}>{p.data.title}</a>
+          <a href={`./people/${p.id}`}>{p.data.title}</a>
         </p>
       ))
   }

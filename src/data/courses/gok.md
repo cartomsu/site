@@ -8,7 +8,7 @@ year: 2
 layout: '~/layouts/MarkdownLayout.astro'
 ---
 
-[Нырцов Максим Валерьевич](/people/nyrtsov)
+[Нырцов Максим Валерьевич](./people/nyrtsov)
 
 [Рабочая программа дисциплины](https://disk.yandex.ru/i/7wBKxnZX6YXYaA)
 

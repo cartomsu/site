@@ -6,7 +6,7 @@ degree: bachelor
 year: 4
 ---
 
-[Чистов Сергей Владимирович](/people/chistov)
+[Чистов Сергей Владимирович](./people/chistov)
 
 **_Темы курса:_**
 

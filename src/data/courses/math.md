@@ -6,5 +6,5 @@ degree: bachelor
 year: 2
 ---
 
-[Кошель Сергей Михайлович](/people/koshel) \
+[Кошель Сергей Михайлович](./people/koshel) \
 [Рабочая программа дисциплины](https://disk.yandex.ru/i/xqfJVBa-3p_4fQ)

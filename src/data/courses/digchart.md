@@ -6,5 +6,5 @@ degree: bachelor
 year: 2
 ---
 
-[Каргашин Павел Евгеньевич](/people/kargashin) \
+[Каргашин Павел Евгеньевич](./people/kargashin) \
 [Рабочая программа дисциплины](https://disk.yandex.ru/i/uqebnybXj4O2RQ)

@@ -6,4 +6,4 @@ degree: bachelor
 year: 2
 ---
 
-[Сёмин Владимир Николаевич](/people/semin)
+[Сёмин Владимир Николаевич](./people/semin)

@@ -7,5 +7,5 @@ year: 2
 subtitle: поточный курс
 ---
 
-[Алексеенко Наталья Анатольевна](/people/alekseenkona) \
+[Алексеенко Наталья Анатольевна](./people/alekseenkona) \
 [Рабочая программа дисциплины](https://disk.yandex.ru/i/vvlbYei6gYxmSg)

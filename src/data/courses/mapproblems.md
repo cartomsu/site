@@ -6,4 +6,4 @@ degree: bachelor
 year: 4
 ---
 
-[Прасолова Анна Ивановна](/people/prasolova)
+[Прасолова Анна Ивановна](./people/prasolova)

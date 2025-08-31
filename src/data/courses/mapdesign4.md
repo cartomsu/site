@@ -6,4 +6,4 @@ degree: bachelor
 year: 4
 ---
 
-[Ушакова Людмила Алексеевна](/people/ushakova)
+[Ушакова Людмила Алексеевна](./people/ushakova)

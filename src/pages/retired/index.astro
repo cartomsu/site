@@ -10,7 +10,7 @@ const retired = await getCollection('retired');
       .sort((a, b) => a.data.title.localeCompare(b.data.title))
       .map((r) => (
         <p>
-          <a href={`/retired/${r.id}`}>{r.data.title}</a>
+          <a href={`./retired/${r.id}`}>{r.data.title}</a>
         </p>
       ))
   }

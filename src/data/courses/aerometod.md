@@ -7,4 +7,4 @@ year: 2
 subtitle: поточный курс
 ---
 
-[Прасолова Анна Ивановна](/people/prasolova)
+[Прасолова Анна Ивановна](./people/prasolova)

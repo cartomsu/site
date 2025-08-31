@@ -6,4 +6,4 @@ degree: bachelor
 year: 2
 ---
 
-[Аляутдинов Али Раисович](/people/aliautdinov)
+[Аляутдинов Али Раисович](./people/aliautdinov)

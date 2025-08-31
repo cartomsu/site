@@ -6,8 +6,8 @@ degree: master
 year: 5
 ---
 
-[Аляутдинов Али Раисович](/people/aliautdinov)
+[Аляутдинов Али Раисович](./people/aliautdinov)
 
-[Самсонов Тимофей Евгеньевич](/people/samsonov)
+[Самсонов Тимофей Евгеньевич](./people/samsonov)
 
-[Сёмин Владимир Николаевич](/people/semin)
+[Сёмин Владимир Николаевич](./people/semin)

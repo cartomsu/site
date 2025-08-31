@@ -6,8 +6,8 @@ degree: bachelor
 year: 4
 ---
 
-[Самсонов Тимофей Евгеньевич](/people/samsonov)
+[Самсонов Тимофей Евгеньевич](./people/samsonov)
 
-[Карпачевский Андрей Михайлович](/people/karpachevskii)
+[Карпачевский Андрей Михайлович](./people/karpachevskii)
 
-[Энтин Андрей Львович](/people/entin)
+[Энтин Андрей Львович](./people/entin)

@@ -6,10 +6,6 @@ export const headerData = {
       text: 'О кафедре',
       links: [
         {
-          text: 'Общая информация',
-          href: getPermalink('/#features'),
-        },
-        {
           text: 'История',
           href: getPermalink('/history'),
         },
@@ -71,7 +67,7 @@ export const headerData = {
     // },
     {
       text: 'Контакты',
-      href: '/contact',
+      href: getPermalink('/contact'),
     },
   ],
   // actions: [{ text: 'Download', href: 'https://github.com/onwidget/astrowind', target: '_blank' }],
@@ -82,10 +78,6 @@ export const footerData = {
     {
       title: 'О кафедре',
       links: [
-        {
-          text: 'Общая информация',
-          href: getPermalink('/#features'),
-        },
         {
           text: 'История',
           href: getPermalink('/history'),

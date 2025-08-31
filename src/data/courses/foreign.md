@@ -6,4 +6,4 @@ degree: master
 year: 6
 ---
 
-[Каргашин Павел Евгеньевич](/people/kargashin)
+[Каргашин Павел Евгеньевич](./people/kargashin)

@@ -6,4 +6,4 @@ degree: master
 year: 5
 ---
 
-[Зимин Михаил Викторович](/people/zimin)
+[Зимин Михаил Викторович](./people/zimin)
