@@ -1,7 +1,7 @@
 site:
   name: Кафедра картографии и геоинформатики
   site: 'https://carto.geogr.msu.ru'
-  base: '/'
+  base: '/site'
   trailingSlash: false
 
   # googleSiteVerificationId: orcPxI47GSa-cRvY11tUe6iGg2IO_RPvnA1q95iEM3M
