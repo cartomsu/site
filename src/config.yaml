@@ -1,0 +1,72 @@
+site:
+  name: Кафедра картографии и геоинформатики
+  site: 'https://carto.geogr.msu.ru'
+  base: '/'
+  trailingSlash: false
+
+  # googleSiteVerificationId: orcPxI47GSa-cRvY11tUe6iGg2IO_RPvnA1q95iEM3M
+
+# Default SEO metadata
+metadata:
+  title:
+    default: Кафедра картографии и геоинформатики
+    template: '%s | Кафедра картографии и геоинформатики'
+  description: 'Сайт кафедры картографии и геоинформатики'
+  robots:
+    index: true
+    follow: true
+  openGraph:
+    site_name: Кафедра картографии и геоинформатики
+    images:
+      - url: '~/assets/images/msu.jpg'
+        width: 1200
+        height: 898
+    type: website
+  twitter:
+    handle: ''
+    site: ''
+    cardType: ''
+
+i18n:
+  language: ru
+  textDirection: ltr
+
+apps:
+  blog:
+    isEnabled: true
+    postsPerPage: 6
+
+    post:
+      isEnabled: true
+      permalink: '/%slug%' # Variables: %slug%, %year%, %month%, %day%, %hour%, %minute%, %second%, %category%
+      robots:
+        index: true
+
+    list:
+      isEnabled: true
+      pathname: 'blog' # Blog main path, you can change this to "articles" (/articles)
+      robots:
+        index: true
+
+    category:
+      isEnabled: true
+      pathname: 'category' # Category main path /category/some-category, you can change this to "group" (/group/some-category)
+      robots:
+        index: true
+
+    tag:
+      isEnabled: true
+      pathname: 'tag' # Tag main path /tag/some-tag, you can change this to "topics" (/topics/some-category)
+      robots:
+        index: false
+
+    isRelatedPostsEnabled: true
+    relatedPostsCount: 4
+
+analytics:
+  vendors:
+    googleAnalytics:
+      id: null # or "G-XXXXXXXXXX"
+
+ui:
+  theme: 'system' # Values: "system" | "light" | "dark" | "light:only" | "dark:only"

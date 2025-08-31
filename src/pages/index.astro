@@ -1,0 +1,338 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+
+import Content from '~/components/widgets/Content.astro';
+import Features from '~/components/widgets/Features.astro';
+import Hero from '~/components/widgets/Hero.astro';
+import Note from '~/components/widgets/Note.astro';
+import Steps from '~/components/widgets/Steps.astro';
+
+const metadata = {
+  title: 'Кафедра картографии и геоинформатики',
+  ignoreTitleTemplate: true,
+};
+---
+
+<Layout metadata={metadata}>
+  <!-- Hero Widget ******************* -->
+
+  <Hero
+    actions={[{ text: 'Подробнее', href: '#features' }]}
+    image={{ src: '~/assets/images/hero-image.png', alt: 'AstroWind Hero Image' }}
+  >
+    <Fragment slot="title">
+      Кафедра <span class="text-accent">картографии</span> и геоинформатики
+    </Fragment>
+
+    <Fragment slot="subtitle">
+      ведущий учебно-научный центр в России по подготовке кадров и научным исследованиям в области <span
+        class="font-semibold text-blue-600">географической</span
+      > картографии и геоинформатики
+    </Fragment>
+  </Hero>
+
+  <!-- Note Widget ******************* -->
+
+  <Note description="Университетская школа географической картографии" />
+
+  <!-- Features Widget *************** -->
+
+  <Features
+    id="features"
+    tagline="Особенности"
+    title="Наша кафедра"
+    subtitle="один из лидеров по востребованности на рынке труда среди географических профессий"
+    items={[
+      {
+        title: 'Баланс теории и практики',
+        description:
+          'Гармоничное сочетание глубоких академических знаний и реальных прикладных навыков позволяет выпускникам отвечать на вызовы современности',
+        icon: 'tabler:components',
+      },
+      {
+        title: 'Фундаментальность',
+        description: 'Изучение основ и принципов науки создаёт прочную базу для дальнейших исследований и инноваций',
+        icon: 'tabler:list-check',
+      },
+      {
+        title: 'На острие технологий',
+        description:
+          'Постоянное внедрение передовых цифровых инструментов и освоение новых технологий поддерживают научное лидерство кафедры',
+        icon: 'tabler:rocket',
+      },
+      {
+        title: 'Развитие новых идей',
+        description:
+          'Стимулирование творческого мышления и научного поиска способствует появлению инновационных проектов и уникальных решений в геоинформатике и картографии',
+        icon: 'tabler:bulb',
+      },
+    ]}
+  />
+
+  <!-- Content Widget **************** -->
+
+  <Content
+    isReversed
+    tagline="Обучение"
+    title="Ключевые направления"
+    items={[
+      {
+        title: 'Географический подход',
+        // description: 'Изучение географических дисциплин для глубокого понимания содержания карт',
+      },
+      {
+        title: 'Картографический метод исследования',
+        // description: 'Учим исследовать пространство системно',
+      },
+      {
+        title: 'Дизайн карт',
+        // description: 'Прагматика. Эргономика. Эстетика.',
+      },
+    ]}
+    image={{
+      src: 'https://images.unsplash.com/photo-1519389950473-47ba0277781c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80',
+      alt: 'Colorful Image',
+    }}
+  >
+    <Fragment slot="content">
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Картография</h3>
+      Фундаментальная подготовка и современные технологии
+    </Fragment>
+
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+    </Fragment>
+  </Content>
+
+  <!-- Content Widget **************** -->
+
+  <Content
+    isAfterContent
+    items={[
+      {
+        title: 'Автоматизация',
+        // description:
+        //   'Разработка методов, алгоритмов и программного обеспечения для оптимизации процессов в географических исследованиях',
+      },
+      {
+        title: 'Геостатистика',
+        // description:
+        //   'Продвинутые инструменты выявления пространственных закономерностей и структуры географических явлений',
+      },
+      {
+        title: 'Анализ сетей',
+        // description:
+        //   'Продвинутые инструменты выявления пространственных закономерностей и структуры географических явлений',
+      },
+      {
+        title: 'Машинное обучение и искусственный интеллект',
+        // description: 'Применение актуальных технологий для обработки больших объемов данных и решения сложных задач',
+      },
+    ]}
+    image={{
+      src: 'https://images.unsplash.com/photo-1600132806370-bf17e65e942f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2194&q=80',
+      alt: 'Blueprint Image',
+    }}
+  >
+    <Fragment slot="content"
+      ><h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Геоинформатика</h3>Современные
+      методы пространственного анализа</Fragment
+    >
+
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+    </Fragment>
+  </Content>
+
+  <!-- Content Widget **************** -->
+
+  <Content
+    isReversed
+    isAfterContent
+    items={[
+      {
+        title: 'Дешифрирование',
+        description: '',
+      },
+      {
+        title: 'Радиолокация',
+        description: '',
+      },
+      {
+        title: 'Беспилотники',
+        description: '',
+      },
+    ]}
+    image={{
+      src: 'https://images.unsplash.com/photo-1611462985358-60d3498e0364?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80',
+      alt: 'Astronauts Image',
+    }}
+  >
+    <Fragment slot="content"
+      ><h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Дистанционное зондирование</h3>
+      Аэрокосмичекие методы в географических исследованиях
+    </Fragment>
+
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+    </Fragment>
+  </Content>
+
+  <!-- Steps Widget ****************** -->
+
+  <Steps
+    title="Этапы обучения"
+    items={[
+      {
+        title: 'Поступление',
+        description:
+          'После первого курса студенты географического факультета поступают на кафедры. На кафедру картографии и геоинформатики стабильно высокий конкурс, поэтому чтобы поступить нужно иметь высокие оценки за экзамены первого курса, практики и успешно пройти собеседование на кафедру.',
+        icon: 'tabler:heart',
+      },
+      {
+        title: 'Бакалавриат',
+        description:
+          'Изучение основ картографии, геоинформатики, геодезии, дистанционного зондирования и работы с ГИС-технологиями, включая учебные полевые и производственные практики.',
+        icon: 'tabler:vocabulary',
+      },
+      {
+        title: 'Магистратура',
+        description:
+          'Поступление по вступительным испытаниям или универсиаде. Акцент на научные исследования, проектную деятельность и освоение специализированных технологий картографии, геоинформатики и дистанционного зондирования.',
+        icon: 'tabler:school',
+      },
+      {
+        title: 'Аспирантура',
+        description:
+          'Научная и педагогическая подготовка для получения учёной степени. Включает проведение собственных исследований, написание диссертации и участие в научных конференциях. Направлена на подготовку кадров высшей категории, профессиональных учёных и преподавателей.',
+        icon: 'tabler:world-heart',
+      },
+    ]}
+    image={{
+      src: 'https://images.unsplash.com/photo-1616198814651-e71f960c3180?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=987&q=80',
+      alt: 'Steps image',
+    }}
+  />
+
+  <!-- Features2 Widget ************** -->
+
+  <!-- <Features2
+    title="Тематики исследований"
+    subtitle="Provides frequently used components for building websites using Tailwind CSS"
+    tagline="Наука"
+    items={[
+      {
+        title: 'Автоматизация в картографии',
+        description: "Ever tried driving without GPS? Boom! That's why websites need headers for direction.",
+        icon: 'flat-color-icons:automotive',
+      },
+      {
+        title: 'Дистанционное зондирование Земли',
+        description:
+          'Like a digital mailbox, but faster! Drop a line, ask a question, or send a virtual high-five. Ding! Message in.',
+        icon: 'flat-color-icons:binoculars',
+      },
+      {
+        title: 'Цифровая картография',
+        description:
+          "Dive into the meat and potatoes of a site; without it, you'd just be window shopping. Content is king.",
+        icon: 'flat-color-icons:radar-plot',
+      },
+      {
+        title: 'Математическая картография',
+        description: 'Behold the dessert menu of the website world. Tempting choices await, can you resist?',
+        icon: 'flat-color-icons:calculator',
+      },
+      {
+        title: 'Геоаналитика',
+        description: 'Step into the gossip corner! Here, other visitors spill the beans and share the juicy details.',
+        icon: 'flat-color-icons:collect',
+      },
+      {
+        title: 'Сетевой анализ',
+        description:
+          "Picture a superhero landing – epic, right? That's the job of a Hero section, making grand entrances!",
+        icon: 'flat-color-icons:circuit',
+      },
+    ]}
+  >
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+    </Fragment>
+  </Features2> -->
+
+  <!-- HighlightedPosts Widget ******* -->
+
+  <!-- <BlogLatestPosts
+    title="Find out more content in our Blog"
+    information={`The blog is used to display AstroWind documentation.
+                        Each new article will be an important step that you will need to know to be an expert in creating a website using Astro + Tailwind CSS.
+                        Astro is a very interesting technology. Thanks.
+                `}
+  /> -->
+
+  <!-- FAQs Widget ******************* -->
+
+  <!-- <FAQs
+    title="Часто задаваемые вопросы"
+    subtitle="Dive into the following questions to gain insights into the powerful features that AstroWind offers and how it can elevate your web development journey."
+    tagline="Ответы на вопросы"
+    classes={{ container: 'max-w-6xl' }}
+    items={[
+      {
+        title: 'Why AstroWind?',
+        description:
+          "Michael Knight a young loner on a crusade to champion the cause of the innocent. The helpless. The powerless in a world of criminals who operate above the law. Here he comes Here comes Speed Racer. He's a demon on wheels.",
+      },
+      {
+        title: 'What do I need to start?',
+        description:
+          'Space, the final frontier. These are the voyages of the Starship Enterprise. Its five-year mission: to explore strange new worlds. Many say exploration is part of our destiny, but it’s actually our duty to future generations.',
+      },
+      {
+        title: 'How to install the Astro + Tailwind CSS template?',
+        description:
+          "Well, the way they make shows is, they make one show. That show's called a pilot. Then they show that show to the people who make shows, and on the strength of that one show they decide if they're going to make more shows.",
+      },
+      {
+        title: "What's something that you don't understand?",
+        description:
+          "A flower in my garden, a mystery in my panties. Heart attack never stopped old Big Bear. I didn't even know we were calling him Big Bear.",
+      },
+    ]}
+  /> -->
+
+  <!-- Stats Widget ****************** -->
+
+  <!-- <Stats
+    stats={[
+      { title: 'Downloads', amount: '132K' },
+      { title: 'Stars', amount: '24.8K' },
+      { title: 'Forks', amount: '10.3K' },
+      { title: 'Users', amount: '48.4K' },
+    ]}
+  /> -->
+
+  <!-- CallToAction Widget *********** -->
+
+  <!-- <CallToAction
+    actions={[
+      {
+        variant: 'primary',
+        text: 'Get template',
+        href: 'https://github.com/onwidget/astrowind',
+        target: '_blank',
+        icon: 'tabler:download',
+      },
+    ]}
+  >
+    <Fragment slot="title">
+      Astro&nbsp;+&nbsp;<br class="block sm:hidden" /><span class="sm:whitespace-nowrap">Tailwind CSS</span>
+    </Fragment>
+
+    <Fragment slot="subtitle">
+      Be very surprised by these huge fake numbers you are seeing on this page. <br class="hidden md:inline" />Don't
+      waste more time! :P
+    </Fragment>
+  </CallToAction> -->
+</Layout>

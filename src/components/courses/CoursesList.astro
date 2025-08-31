@@ -1,0 +1,18 @@
+---
+import type { CollectionEntry } from 'astro:content';
+export interface Props {
+  courses: Array<CollectionEntry<'courses'>>;
+}
+
+const { courses } = Astro.props;
+---
+
+<ul>
+  {
+    courses.map((c) => (
+      <li>
+        <a href={`/courses/${c.id}`}>{c.data.title}</a> {c.data.subtitle}
+      </li>
+    ))
+  }
+</ul>

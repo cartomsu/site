@@ -1,0 +1,17 @@
+---
+import { getCollection } from 'astro:content';
+import MarkdownLayout from '~/layouts/MarkdownLayout.astro';
+const people = await getCollection('people');
+---
+
+<MarkdownLayout frontmatter={{ title: 'Сотрудники' }}>
+  {
+    people
+      .sort((a, b) => a.data.title.localeCompare(b.data.title))
+      .map((p) => (
+        <p>
+          <a href={`/people/${p.id}`}>{p.data.title}</a>
+        </p>
+      ))
+  }
+</MarkdownLayout>

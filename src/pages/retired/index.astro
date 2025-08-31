@@ -1,0 +1,17 @@
+---
+import { getCollection } from 'astro:content';
+import MarkdownLayout from '~/layouts/MarkdownLayout.astro';
+const retired = await getCollection('retired');
+---
+
+<MarkdownLayout frontmatter={{ title: 'С нами работали' }}>
+  {
+    retired
+      .sort((a, b) => a.data.title.localeCompare(b.data.title))
+      .map((r) => (
+        <p>
+          <a href={`/retired/${r.id}`}>{r.data.title}</a>
+        </p>
+      ))
+  }
+</MarkdownLayout>

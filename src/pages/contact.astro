@@ -1,0 +1,70 @@
+---
+import Features2 from '~/components/widgets/Features2.astro';
+import Hero from '~/components/widgets/Hero.astro';
+import Layout from '~/layouts/PageLayout.astro';
+
+const metadata = {
+  title: 'Контакты',
+};
+---
+
+<Layout metadata={metadata}>
+  <!-- HeroText Widget ******************* -->
+
+  <!-- <HeroText tagline="Contact" title="Let's Connect!" /> -->
+
+  <!-- <ContactUs
+    id="form"
+    title="Drop us a message today!"
+    subtitle="For quicker answers, explore our FAQs section. You may find the solution you're looking  for right there! If not, our support team is delighted to help you."
+    inputs={[
+      {
+        type: 'text',
+        name: 'name',
+        label: 'Name',
+      },
+      {
+        type: 'email',
+        name: 'email',
+        label: 'Email',
+      },
+    ]}
+    textarea={{
+      label: 'Message',
+    }}
+    disclaimer={{
+      label:
+        'By submitting this contact form, you acknowledge and agree to the collection of your personal information.',
+    }}
+    description="Our support team typically responds within 24 business hours."
+  /> -->
+
+  <!-- Features2 Widget ************** -->
+
+  <Features2
+    title="Связаться"
+    items={[
+      {
+        title: 'Телеграм',
+        description: '<a href="https://t.me/s/cartomsu" target="_blank">https://t.me/cartomsu</a>',
+        icon: 'tabler:brand-telegram',
+      },
+      {
+        title: 'Электронная почта',
+        description: '<a href="mailto:carto@geogr.msu.ru" target="_blank">carto@geogr.msu.ru</a>',
+        icon: 'tabler:at',
+      },
+      {
+        title: 'Почтовый адрес',
+        description: '119991, г. Москва, ГСП-1, Ленинские горы, МГУ, географический факультет',
+        icon: 'tabler:mail',
+      },
+    ]}
+  />
+
+  <Hero
+    tagline="Где"
+    title="19 этаж Главного здания МГУ"
+    image={{ src: '~/assets/images/msu2.jpg', alt: 'Hero Image' }}
+  />
+</Layout>

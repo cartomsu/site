@@ -1,0 +1,22 @@
+---
+import { getCollection, render } from 'astro:content';
+import ReturnLink from '~/components/common/ReturnLink.astro';
+import MarkdownLayout from '~/layouts/MarkdownLayout.astro';
+// 1. Generate a new path for every collection entry
+export async function getStaticPaths() {
+  const courses = await getCollection('courses');
+  return courses.map((с) => ({
+    params: { id: с.id },
+    props: { с },
+  }));
+}
+// 2. For your template, you can get the entry directly from the prop
+const { с } = Astro.props;
+const { Content } = await render(с);
+---
+
+<MarkdownLayout frontmatter={с.data}>
+  <p>{с.data.subtitle}</p>
+  <Content />
+  <ReturnLink link="/courses" text="К списку" />
+</MarkdownLayout>

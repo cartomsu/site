@@ -1,0 +1,28 @@
+---
+import { getCollection } from 'astro:content';
+import CoursesList from '~/components/courses/CoursesList.astro';
+import MarkdownLayout from '~/layouts/MarkdownLayout.astro';
+const courses = await getCollection('courses');
+---
+
+<MarkdownLayout frontmatter={{ title: 'Учебные курсы' }}>
+  <h2>Бакалавриат</h2>
+  <h3>1 курс</h3>
+  <CoursesList courses={courses.filter((c) => c.data.year === 1)} />
+
+  <h3>2 курс</h3>
+  <CoursesList courses={courses.filter((c) => c.data.year === 2)} />
+
+  <h3>3 курс</h3>
+  <CoursesList courses={courses.filter((c) => c.data.year === 3)} />
+
+  <h3>4 курс</h3>
+  <CoursesList courses={courses.filter((c) => c.data.year === 4)} />
+
+  <h2>Магистратура</h2>
+  <h3>1 курс</h3>
+  <CoursesList courses={courses.filter((c) => c.data.year === 5)} />
+
+  <h3>2 курс</h3>
+  <CoursesList courses={courses.filter((c) => c.data.year === 6)} />
+</MarkdownLayout>
