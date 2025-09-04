@@ -2,6 +2,7 @@
 import { getCollection, render } from 'astro:content';
 import ReturnLink from '~/components/common/ReturnLink.astro';
 import MarkdownLayout from '~/layouts/MarkdownLayout.astro';
+import { getPermalink } from '~/utils/permalinks';
 // 1. Generate a new path for every collection entry
 export async function getStaticPaths() {
   const retired = await getCollection('retired');
@@ -17,5 +18,5 @@ const { Content } = await render(r);
 
 <MarkdownLayout frontmatter={r.data}>
   <Content />
-  <ReturnLink link="/retired" text="К списку" />
+  <ReturnLink link={getPermalink('retired')} text="К списку" />
 </MarkdownLayout>
