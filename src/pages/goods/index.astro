@@ -1,0 +1,29 @@
+---
+import { getCollection } from 'astro:content';
+import SingleGood from '~/components/blog/SingleGood.astro';
+import Layout from '~/layouts/PageLayout.astro';
+const goods = await getCollection('goods');
+---
+
+<Layout>
+  <section class="px-6 sm:px-6 py-12 sm:py-16 lg:py-20 mx-auto max-w-4xl">
+    {
+      goods
+        // .sort((a, b) => a.data.title.localeCompare(b.data.title))
+        .map((r) => (
+          <SingleGood
+            title={r.data.title}
+            image={r.data.image}
+            link={`./goods/${r.id}`}
+            description={'Такой вот шоппер'}
+          />
+        ))
+    }
+    <!-- <BlogList posts={page.data} /> -->
+    <!-- <Pagination prevUrl={page.url.prev} nextUrl={page.url.next} /> -->
+    <!--
+      <PostTags tags={allCategories} class="mb-2" title="Search by Categories:" isCategory />
+      <PostTags tags={allTags}  title="Search by Tags:" />
+    -->
+  </section>
+</Layout>

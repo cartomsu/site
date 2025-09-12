@@ -91,9 +91,18 @@ const coursesCollection = defineCollection({
   }),
 });
 
+const goodsCollection = defineCollection({
+  loader: glob({ pattern: ['*.md'], base: 'src/data/goods' }),
+  schema: z.object({
+    title: z.string(),
+    image: z.string().optional(),
+  }),
+});
+
 export const collections = {
   post: postCollection,
   people: peopleCollection,
   retired: retiredCollection,
   courses: coursesCollection,
+  goods: goodsCollection,
 };
