@@ -6,7 +6,8 @@ degree: bachelor
 year: 4
 ---
 
-[Чистов Сергей Владимирович](./people/chistov)
+[Энтин Андрей Львович](./people/entin)
+[Титов Герман Сергеевич](./people/titov)
 
 **_Темы курса_**
 
