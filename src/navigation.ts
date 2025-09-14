@@ -1,4 +1,4 @@
-import { getPermalink } from './utils/permalinks';
+import { getPermalink } from './utils/permalinks'
 
 export const headerData = {
   links: [
@@ -61,17 +61,17 @@ export const headerData = {
         },
       ],
     },
-    // {
-    //   text: 'Наука',
-    //   href: '#',
-    // },
+    {
+      text: 'Новости',
+      href: getPermalink('/news'),
+    },
     {
       text: 'Контакты',
       href: getPermalink('/contact'),
     },
   ],
   // actions: [{ text: 'Download', href: 'https://github.com/onwidget/astrowind', target: '_blank' }],
-};
+}
 
 export const footerData = {
   links: [
@@ -143,7 +143,10 @@ export const footerData = {
       ],
     },
   ],
-  secondaryLinks: [{ text: 'Контакты', href: getPermalink('/contact') }],
+  secondaryLinks: [
+    { text: 'Новости', href: getPermalink('/news') },
+    { text: 'Контакты', href: getPermalink('/contact') },
+  ],
   socialLinks: [
     { ariaLabel: 'Telegram', icon: 'tabler:brand-telegram', href: 'https://t.me/cartomsu' },
     {
@@ -158,4 +161,4 @@ export const footerData = {
     },
   ],
   footNote: `© ${new Date().getFullYear()} Кафедра картографии и геоинформатики`,
-};
+}

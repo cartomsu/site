@@ -99,10 +99,36 @@ const goodsCollection = defineCollection({
   }),
 });
 
+const telegramCollection = defineCollection({
+  loader: async () => {
+    const response = await fetch('https://api.topographia.ru/tgapi/json');
+    const data = await response.json();
+
+    const messages = data.messages
+      .filter((m) => m.message)
+      .map((m) => ({
+        id: String(m.id),
+        date: new Date(m.date * 1000),
+        message: m.message,
+        ...(m.media?.photo && { photo: `https://api.topographia.ru/tgapi/media/${m.id}/preview` }),
+      }));
+
+    console.log(messages);
+    return messages;
+  },
+  schema: z.object({
+    id: z.string(),
+    date: z.date(),
+    message: z.string(),
+    photo: z.string().optional(),
+  }),
+});
+
 export const collections = {
   post: postCollection,
   people: peopleCollection,
   retired: retiredCollection,
   courses: coursesCollection,
   goods: goodsCollection,
+  telegram: telegramCollection,
 };
