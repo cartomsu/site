@@ -1,5 +1,5 @@
-import { glob } from 'astro/loaders';
-import { defineCollection, z } from 'astro:content';
+import { glob } from 'astro/loaders'
+import { defineCollection, z } from 'astro:content'
 
 const metadataDefinition = () =>
   z
@@ -44,7 +44,7 @@ const metadataDefinition = () =>
         })
         .optional(),
     })
-    .optional();
+    .optional()
 
 const postCollection = defineCollection({
   loader: glob({ pattern: ['*.md', '*.mdx'], base: 'src/data/post' }),
@@ -63,7 +63,7 @@ const postCollection = defineCollection({
 
     metadata: metadataDefinition(),
   }),
-});
+})
 
 const peopleCollection = defineCollection({
   loader: glob({ pattern: ['*.md'], base: 'src/data/people' }),
@@ -71,7 +71,7 @@ const peopleCollection = defineCollection({
     title: z.string(),
     branch: z.string().optional(),
   }),
-});
+})
 
 const retiredCollection = defineCollection({
   loader: glob({ pattern: ['*.md'], base: 'src/data/retired' }),
@@ -79,7 +79,7 @@ const retiredCollection = defineCollection({
     title: z.string(),
     branch: z.string().optional(),
   }),
-});
+})
 
 const coursesCollection = defineCollection({
   loader: glob({ pattern: ['*.md'], base: 'src/data/courses' }),
@@ -89,7 +89,7 @@ const coursesCollection = defineCollection({
     year: z.number().optional(),
     subtitle: z.string().optional(),
   }),
-});
+})
 
 const goodsCollection = defineCollection({
   loader: glob({ pattern: ['*.md'], base: 'src/data/goods' }),
@@ -97,12 +97,12 @@ const goodsCollection = defineCollection({
     title: z.string(),
     image: z.string().optional(),
   }),
-});
+})
 
 const telegramCollection = defineCollection({
   loader: async () => {
-    const response = await fetch('https://api.topographia.ru/tgapi/json');
-    const data = await response.json();
+    const response = await fetch('https://api.topographia.ru/tgapi/json')
+    const data = await response.json()
 
     const messages = data.messages
       .filter((m) => m.message)
@@ -111,10 +111,9 @@ const telegramCollection = defineCollection({
         date: new Date(m.date * 1000),
         message: m.message,
         ...(m.media?.photo && { photo: `https://api.topographia.ru/tgapi/media/${m.id}/preview` }),
-      }));
+      }))
 
-    console.log(messages);
-    return messages;
+    return messages
   },
   schema: z.object({
     id: z.string(),
@@ -122,7 +121,7 @@ const telegramCollection = defineCollection({
     message: z.string(),
     photo: z.string().optional(),
   }),
-});
+})
 
 export const collections = {
   post: postCollection,
@@ -131,4 +130,4 @@ export const collections = {
   courses: coursesCollection,
   goods: goodsCollection,
   telegram: telegramCollection,
-};
+}
