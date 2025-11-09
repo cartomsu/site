@@ -9,11 +9,7 @@ const telegram = await getCollection('telegram')
 <Layout frontmatter={{ title: 'Новости' }}>
   {
     telegram.map((message) => (
-      <article
-        class={
-          'max-w-md mx-auto md:max-w-none grid intersect-once intersect-quarter motion-safe:md:opacity-0 motion-safe:md:intersect:animate-fade'
-        }
-      >
+      <article class={'max-w-md mx-auto md:max-w-none grid intersect-once intersect-quarter'}>
         <h2 class="text-xl sm:text-2xl font-bold leading-tight mb-2 font-heading dark:text-slate-300">
           {message.data.date.toLocaleString('ru', {
             dateStyle: 'full',
